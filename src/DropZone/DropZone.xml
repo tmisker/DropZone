@@ -37,11 +37,29 @@
             <category>Settings</category>
             <description>Maximum file size in MB</description>
         </property>
+        <property key="textFileTooBig" type="translatableString" required="false">
+            <caption>File too big message</caption>
+            <category>Settings</category>
+            <description>The message that gets displayed when uploading a file that is too big. You can use the tokens {{filesize}} and {{maxFilesize}}.</description>            
+            <translations>
+                <translation lang="en_US">File is too big ({{filesize}}MiB). Max filesize: {{maxFilesize}}MiB.</translation>
+                <translation lang="nl_NL">Het bestand is te groot ({{filesize}}MiB). Maximale bestandsgrootte: {{maxFilesize}}MiB.</translation>
+            </translations>
+        </property>
         <property key="maxFileCount" type="integer" defaultValue="0">
             <caption>Max files</caption>
             <category>Settings</category>
             <description>Maximum number of files to upload, if > 0</description>
         </property>		
+        <property key="textMaxFilesExceeded" type="translatableString" required="false">
+            <caption>Max files message</caption>
+            <category>Settings</category>
+            <description>The message that gets displayed when trying to upload more files than possible.</description>            
+            <translations>
+                <translation lang="en_US">You can not upload any more files.</translation>
+                <translation lang="nl_NL">Er kunnen niet meer bestanden geüpload worden.</translation>
+            </translations>
+        </property>
         <property key="panelheight" type="integer" defaultValue="200">
             <caption>Height</caption>
             <category>Settings</category>
@@ -84,6 +102,33 @@
             <translations>
                 <translation lang="en_US">Click here, or drop files here to upload.</translation>
                 <translation lang="nl_NL">Klik hier, of sleep bestanden hierheen om te uploaden.</translation>
+            </translations>
+        </property>
+        <property key="textCancelUpload" type="translatableString" required="false">
+            <caption>Cancel upload caption</caption>
+            <category>Display</category>
+            <description>The caption below the file to cancel an upload.</description>            
+            <translations>
+                <translation lang="en_US">Cancel upload</translation>
+                <translation lang="nl_NL">Upload annuleren</translation>
+            </translations>
+        </property>
+        <property key="textCancelUploadConfirmation" type="translatableString" required="false">
+            <caption>Cancel upload confirmation message</caption>
+            <category>Display</category>
+            <description>The message that gets displayed before cancelling an upload.</description>            
+            <translations>
+                <translation lang="en_US">Are you sure you want to cancel this upload?</translation>
+                <translation lang="nl_NL">Weet u zeker dat u deze upload wilt annuleren?</translation>
+            </translations>
+        </property>
+        <property key="textRemoveFile" type="translatableString" required="false">
+            <caption>Remove file caption</caption>
+            <category>Display</category>
+            <description>The caption below the file to remove the file from the dropzone.</description>            
+            <translations>
+                <translation lang="en_US">Remove file</translation>
+                <translation lang="nl_NL">Bestand verwijderen</translation>
             </translations>
         </property>
         <property key="onChangemf" type="microflow" required="false" entityProperty="imageentity">

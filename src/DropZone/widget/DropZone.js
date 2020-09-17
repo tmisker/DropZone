@@ -51,6 +51,11 @@ define([
         dropzone: null,
         parallelUploads: 4,
         _contextObj: null,
+        textFileTooBig: "File is too big ({{filesize}}MiB). Max filesize: {{maxFilesize}}MiB.",
+        textCancelUpload: "Cancel upload",
+        textCancelUploadConfirmation: "Are you sure you want to cancel this upload?",
+        textRemoveFile: "Remove file",
+        textMaxFilesExceeded: "You can not upload any more files.",
 
         /**
          * dojo.declare.constructor is called to construct the widget instance. Implement to initialize non-primitive properties.
@@ -120,6 +125,11 @@ define([
                 autoProcessQueue: this.autoUpload,
                 addRemoveLinks: true,
                 dictDefaultMessage: this.message,
+                dictFileTooBig: this.textFileTooBig,
+                dictCancelUpload: this.textCancelUpload,
+                dictCancelUploadConfirmation: this.textCancelUploadConfirmation,
+                dictRemoveFile: this.textRemoveFile,
+                dictMaxFilesExceede: this.textMaxFilesExceeded,
                 accept: dojoLang.hitch(this, this.accept),
                 parallelUploads: this.parallelUploads,
                 headers: {
